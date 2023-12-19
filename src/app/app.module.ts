@@ -12,6 +12,8 @@ import { HomeComponent } from './Pages/home/home.component';
 import { SalesComponent } from './Pages/sales/sales.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './Pages/footer/footer.component';
+import { FurnitureComponent } from './Pages/Product/furniture/furniture.component';
+import { DecoritemsComponent } from './Pages/Product/decoritems/decoritems.component';
 
 
 
@@ -25,6 +27,8 @@ import { FooterComponent } from './Pages/footer/footer.component';
       
          SalesComponent,
                 FooterComponent,
+                FurnitureComponent,
+                DecoritemsComponent,
    
   ],
   imports: [
