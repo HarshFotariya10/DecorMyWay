@@ -10,6 +10,8 @@
     justify-content: space-evenly;
 }
 
+
+
 .nav-logo{
     height: 50px;
     width: 100px;
@@ -72,4 +74,54 @@
 .nav-cart{
     font-size: 1rem;
     font-weight: 700;
+}
+
+.abs li{
+    position: relative;  
+}
+.sub-menu{
+    position: absolute;
+    background-color: #ffffff;
+    width: 140px;
+    left: 0;
+    height:auto ;
+    
+    display: none;
+   
+    
+}
+
+.sub-menu li{
+    margin-top: 8px;
+    padding: auto;
+    list-style: none;
+    
+}
+.navbar-nav li:hover > .sub-menu{
+    display: block;
+    animation: slideup .4s;
+}
+@keyframes slideup {
+    0%{
+            opacity: 0;
+            transform: none;
+    }
+    100%{
+        opacity: 1;
+        transform:none;
+    }
+}
+.sub-menu:hover{
+    box-shadow: 0 3px 6px rgb(0, 0, 0 ,0.16), 0 3px 6px rgb(0, 0, 0 ,0.23);
+    transition:translate(0px,-8px);
+}
+@media(max-width:1000px)  {
+    .sub-menu{
+        width: 45%;
+    }
+}
+@media(max-width:750px)  {
+    .sub-menu{
+        width: 100%;
+    }
 }
