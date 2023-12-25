@@ -3,15 +3,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Pages/home/home.component';
 
 import { SalesComponent } from './Pages/sales/sales.component';
+import { FurnitureComponent } from './Pages/Product/furniture/furniture.component';
+import { AboutusComponent } from './Pages/aboutus/aboutus.component';
 
 const routes: Routes = [
   {
-    path:'products',
+    path:'',
     component:HomeComponent
   },
   {
-    path:'sales',
-    component:SalesComponent
+    path:'furniture',
+    component:FurnitureComponent
+  },
+  {
+    path:'about',
+    component:AboutusComponent
   }
 ];
 

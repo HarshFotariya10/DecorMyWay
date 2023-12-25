@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './Pages/footer/footer.component';
 import { FurnitureComponent } from './Pages/Product/furniture/furniture.component';
 import { DecoritemsComponent } from './Pages/Product/decoritems/decoritems.component';
+import { AboutusComponent } from './Pages/aboutus/aboutus.component';
 
 
 
@@ -29,6 +30,7 @@ import { DecoritemsComponent } from './Pages/Product/decoritems/decoritems.compo
                 FooterComponent,
                 FurnitureComponent,
                 DecoritemsComponent,
+                AboutusComponent,
    
   ],
   imports: [
