@@ -1,100 +1,76 @@
-*{
-    margin: 0;
-    background:white;
-}
-h3{
-    text-align: center;
-    font-size: 30px;
-    margin: 0;
-    padding-top: 40px;
-}
-a{
-    text-decoration: none;
-}
-.gallery{
-    display: flex;
-    flex-wrap:wrap;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
-}
-.content{
-    height: 375px;
-    width: 300px;
-    margin:15px;
-    box-sizing: border-box;
-    float: left;
-    text-align: center;
-    border-radius: 20px;
-    cursor: pointer;
-    padding-top: 10px;
-    box-shadow: 0 14px 28px rgb(0, 0, 0,0.25),0 10px 10px rgb(0, 0, 0,0.22);
-    transition: .4s;
-    background: #ffffff;
-}
-.content:hover{
-    box-shadow: 0 3px 6px rgb(0, 0, 0 ,0.16), 0 3px 6px rgb(0, 0, 0 ,0.23);
-    transition:translate(0px,-8px);
 
-}
-img{
-    width: 250px;
-    height: 200px;
-    text-align: center;
-    margin: 0 auto;
-}
-h6{
-    font-size: 26px;
-    text-align: center;
-    color: #222f2e;
-    margin: 0;
-}
-ul{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0;
-}
-li{
-    padding-top: 5px;
-}
-.fa{
-    font-size: 26px;
-    
-    margin: 5px;
-}
-.checked{
-    color: #ff9f43;
-}
-
-button{
-    text-align: center;
-    font-size: 30px;
-    color: #fff;
-    width: 100%;
-    padding: 15px;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    margin-top: 13px;
-    border-bottom-right-radius:20px ;
-    border-bottom-left-radius: 20px;
-    background-color: lightcoral;
-}
-@media(max-width:1000px)  {
-    .content{
-        width: 45%;
-    }
-}
-@media(max-width:750px)  {
-    .content{
-        width: 100%;
-    }
-}
-header{
-    font-size: 50px;
-    text-align: center;
-    margin-top: 80px    ;
-}
+.section-title {
+    color: #2f2f2f; }
+  
+  .product-section {
+    padding: 2rem 0; }
+    .product-section .product-item {
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      padding-bottom: 50px;
+      cursor: pointer; }
+      .product-section .product-item .product-thumbnail {
+        margin-bottom: 30px;
+        position: relative;
+        top: 0;
+        -webkit-transition: .3s all ease;
+        -o-transition: .3s all ease;
+        transition: .3s all ease; }
+      .product-section .product-item h3 {
+        font-weight: 600;
+        font-size: 16px; }
+      .product-section .product-item strong {
+        font-weight: 800 !important;
+        font-size: 18px !important; }
+      .product-section .product-item h3, .product-section .product-item strong {
+        color: #2f2f2f;
+        font-weight:bolder;
+        text-decoration: none; }
+      .product-section .product-item .icon-cross {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        background: #2f2f2f;
+        bottom: 15px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        margin-bottom: -17.5px;
+        border-radius: 50%;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: .3s all ease;
+        -o-transition: .3s all ease;
+        transition: .3s all ease; }
+        .product-section .product-item .icon-cross img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+      .product-section .product-item:before {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        content: "";
+        background: #dce5e4;
+        height: 0%;
+        z-index: -1;
+        border-radius: 10px;
+        -webkit-transition: .3s all ease;
+        -o-transition: .3s all ease;
+        transition: .3s all ease; }
+      .product-section .product-item:hover .product-thumbnail {
+        top: -25px; }
+      .product-section .product-item:hover .icon-cross {
+        bottom: 0;
+        opacity: 1;
+        visibility: visible; }
+      .product-section .product-item:hover:before {
+        height: 70%; }
