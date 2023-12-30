@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   <!--Header-->
   <navbar></navbar>
   
+  
   <router-outlet></router-outlet>
   
 

@@ -5,6 +5,7 @@ import { HomeComponent } from './Pages/home/home.component';
 import { SalesComponent } from './Pages/sales/sales.component';
 import { FurnitureComponent } from './Pages/Product/furniture/furniture.component';
 import { AboutusComponent } from './Pages/aboutus/aboutus.component';
+import { ContactComponent } from './Pages/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path:'about',
     component:AboutusComponent
+  },
+  {
+    path:'contact',
+    component:ContactComponent
   }
 ];
 
