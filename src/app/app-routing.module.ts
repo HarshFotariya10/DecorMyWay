@@ -6,6 +6,7 @@ import { SalesComponent } from './Pages/sales/sales.component';
 import { FurnitureComponent } from './Pages/Product/furniture/furniture.component';
 import { AboutusComponent } from './Pages/aboutus/aboutus.component';
 import { ContactComponent } from './Pages/contact/contact.component';
+import { DecoritemsComponent } from './Pages/Product/decoritems/decoritems.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path:'contact',
     component:ContactComponent
+  },
+  {
+    path:'decoritems',
+    component:DecoritemsComponent
   }
 ];
 
