@@ -16,6 +16,8 @@ import { FurnitureComponent } from './Pages/Product/furniture/furniture.componen
 import { DecoritemsComponent } from './Pages/Product/decoritems/decoritems.component';
 import { AboutusComponent } from './Pages/aboutus/aboutus.component';
 import { ContactComponent } from './Pages/contact/contact.component';
+import { CartComponent } from './Pages/cart/cart.component';
+import { ShopComponent } from './Pages/Product/shop/shop.component';
 
 
 
@@ -33,6 +35,8 @@ import { ContactComponent } from './Pages/contact/contact.component';
                 DecoritemsComponent,
                 AboutusComponent,
                 ContactComponent,
+                CartComponent,
+                ShopComponent,
    
   ],
   imports: [
