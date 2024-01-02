@@ -1,6 +1,17 @@
 
 .section-title {
-    color: #2f2f2f; }
+    color: #2f2f2f; 
+}
+.heading h1{
+   /* CSS for h1 heading */
+    color: #333; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 2em; 
+    font-weight: bold; 
+    text-align: center; 
+    margin-bottom: 20px; 
+  
+}
   
   .product-section {
     padding: 2rem 0; }

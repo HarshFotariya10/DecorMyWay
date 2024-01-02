@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {faUser} from '@fortawesome/free-solid-svg-icons'
+import { ObjectUnsubscribedError } from 'rxjs';
 
 @Component({
   selector: 'navbar',
@@ -8,4 +9,9 @@ import {faUser} from '@fortawesome/free-solid-svg-icons'
 })
 export class NavbarComponent {
   icon=faUser;
+  constructor(){}
+  signup(data:Object):void{
+    console.warn(data);
+    
+  }
 }
