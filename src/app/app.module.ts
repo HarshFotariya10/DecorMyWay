@@ -20,6 +20,7 @@ import { CartComponent } from './Pages/cart/cart.component';
 import { ShopComponent } from './Pages/Product/shop/shop.component';
 import { FormsModule } from '@angular/forms';
 import { AccountComponent } from './Pages/account/account.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -47,6 +48,7 @@ import { AccountComponent } from './Pages/account/account.component';
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,
+    BrowserAnimationsModule,
    
   ],
   providers: [],

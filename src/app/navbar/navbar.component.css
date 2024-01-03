@@ -3,13 +3,15 @@
 }
 .navbar {
     height: 60px;
-    background-color: #CD7F32;
+    
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-
+.color{
+    background: linear-gradient(rgb(196,164,132),#ca8f62);
+}
 
 
 .nav-logo{
@@ -210,10 +212,54 @@
     color: black;
     font-family: 'Arial', sans-serif;
     font-size:25px;
-    
     text-align: center;
     margin-top: 10px;
     margin-right: 40px;
 }
+.inputgroup .input{
+    
+    border: 2px solid black;
+    width: 100%;
+    padding: 10px;
+    color: black;
+	outline:none;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+.inputgroup{
+	
+	display:flex;
+    width:100%;
+    position: relative;
+}
+.inputgroup span{
+	left:0;
+	margin-left: 10px;
+    margin-top: -6px; 
+    position: absolute;
+    top: 1rem;
+    color: grey;
+    pointer-events: none;
+	transition:0.3s;
+	font-size:1.2rem;
+    
+}
 
-
+.input:valid ~ span,
+.input:focus ~ span
+{
+    transform:
+		translateX(10px) translateY(-7px);	
+		color: black;
+		font-size:0.80rem;
+		margin-top:-18px;
+		background:white;
+        padding: 4px; 
+}
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: black !important;
+}

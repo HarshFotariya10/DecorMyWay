@@ -1,6 +1,6 @@
 <!--Navbar1-->
 <header>
-    <div class="navbar container-fluid">
+    <div class="navbar color container-fluid">
         <div class="nav-logo border1">
             <div class="logo"></div>
         </div>
@@ -98,7 +98,7 @@
 
 </nav>
 <!--login From-->
-    <div  class="modal fade" id="loginModal"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div *ngIf="showloginpage"  class="modal fade" id="loginModal"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form #loginuser="ngForm" (ngSubmit)="signup(loginuser.value)" >
@@ -110,18 +110,18 @@
                         <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Email address</label>
-                            <input type="email" ngModel name="email" class="form-control">
-                        </div>
-                        <div class="mb-4">
-                            <label class="form-label">Password</label>
-                            <input type="password"ngModel name="pass" class="form-control">
-                        </div>
+                        <div class="inputgroup mb-3">
+                            <input required="required" type="email" class="input">
+                            <span> Email Address </span>
+                          </div>
+                          <div class="inputgroup mb-4" style="margin-top: 30px;margin-bottom: 30px;">
+                            <input required="required" type="password" class="input">
+                            <span> Password </span>
+                          </div>
                         <div class="d-flex align-items-center justify-content-between mb-2">
                             <button type="submit" class="btn btn-dark"(click)="loggedin()" data-bs-dismiss="modal">LOGIN</button>
-                            <a (click)="signin()" data-bs-toggle="modal" data-bs-target="#registerModal">Sign in</a>
-                            <a (click)="forgot()" data-bs-toggle="modal" data-bs-target="#forgot1">Forgot Password</a>
+                            <a href="" style="color: black;" (click)="signin()" data-bs-toggle="modal" data-bs-target="#registerModal">Sign in</a>
+                            <a href="" style="color: black;" (click)="forgot()" data-bs-toggle="modal" data-bs-target="#forgot1">Forgot Password</a>
                         </div>
                         
                     </div>
@@ -149,42 +149,59 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Name</label>
-                                    <input type="text" class="form-control">
+                                    <div class="inputgroup" style="margin-top: 30px;">
+                                        <input required="required" type="text" class="input">
+                                        <span> Full Name </span>
+                                    </div>
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Email</label>
-                                    <input type="email" class="form-control">
+                                    <div class="inputgroup" style="margin-top: 30px;">
+                                        <input required="required" type="number" class="input">
+                                        <span> Moblie No </span>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Phone Number</label>
-                                    <input type="number" class="form-control">
+                                <div class="center">
+                                    <div class="inputgroup" style="margin-top: 30px;">
+                                        <input required="required" type="email" class="input">
+                                        <span> Email Address</span>
+                                    </div>
                                 </div>
 
                                 <div class="col-md-12 p-0 mb-3">
-                                    <label class="form-label">Address</label>
-                                    <textarea class="form-control" rows="1"></textarea>
+                                    <div class="inputgroup" style="margin-top: 30px;">
+                                        <textarea required="required" rows="1" type="text" class="input" style="border: 2px solid black;"></textarea>
+                                        <span>Address</span>
+                                    </div>
                                 </div>
                                 <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Pincode</label>
-                                    <input type="number" class="form-control">
+                                    <div class="inputgroup" style="margin-top: 30px;">
+                                        <input required="required" type="number" class="input">
+                                        <span>Pincode</span>
+                                    </div>
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Date of birth</label>
-                                    <input type="date" class="form-control">
+                                    <div class="inputgroup" style="margin-top: 30px;">
+                                        <input required="required" type="date" class="input date">
+                                        <span>Date of Birth</span>
+                                    </div>
                                 </div>
                                 <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Password</label>
-                                    <input type="password" class="form-control">
+                                    <div class="inputgroup" style="margin-top: 30px;">
+                                        <input required="required" type="password" class="input">
+                                        <span>Password</span>
+                                    </div>
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control">
+                                    <div class="inputgroup" style="margin-top: 30px;">
+                                        <input required="required" type="password" class="input">
+                                        <span>Confirm Password</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class ="text-center my-1">
+                        <div class ="d-flex align-items-center justify-content-between mb-2 text-center">
                             <button type="submit" class="btn btn-dark">REGISTER</button>
+                            <a href="" style="color: black;" (click)="logpage()"data-bs-toggle="modal" data-bs-target="#loginModal">Already have account? please login</a>
                         </div>
                     </div>
                 </form>
@@ -227,7 +244,7 @@
             <p>Welcome User</p>
         </div>
         <div class="d-flex">
-            <Button  type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" routerLink="/profile"><i class="fas fa-user"></i></Button>
+            <Button  type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2"routerLink="/profile"><i class="fas fa-user"></i></Button>
             </div>
         </div>
     </div>
@@ -241,30 +258,38 @@
         <div  class="modal-content">
             <form>
                 <div class="modal-header">
-                    <h4 class="modal-title d-flex align-items-center" style="margin-left: 180px;">
-                        <i class="bi bi-person-circle fs-3 me-2"></i>
+                    <h4 class="modal-title d-flex align-items-center" style="margin-left: 150px;">
+                        <i class="bi bi-person-circle fs-3 me-1"></i>
                         Forgot Password
                     </h4>
                     <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <div class="mb-2">
+                        <div class="inputgroup" style="margin-top: 30px;">
+                            <input required="required" type="email" class="input">
+                            <span>Email Address</span>
+                        </div>
+                    </div>
                     <div class="mb-3">
-                        <label class="form-label">Email address</label>
-                        <input type="email" ngModel name="email" class="form-control">
+                        <div class="inputgroup" style="margin-top: 30px;">
+                            <input required="required" type="text" class="input">
+                            <span>OTP</span>
+                        </div>
                     </div>
                     <div class="mb-4">
-                        <label class="form-label">OTP</label>
-                        <input type="text" ngModel name="otp" class="form-control">
+                        <div class="inputgroup" style="margin-top: 30px;">
+                            <input required="required" type="password" class="input">
+                            <span>Password</span>
+                        </div>
                     </div>
                     <div class="mb-5">
-                        <label class="form-label">change Password</label>
-                        <input type="text" ngModel name="changepass" class="form-control">
+                        <div class="inputgroup" style="margin-top: 30px;">
+                            <input required="required" type="password" class="input">
+                            <span>Confirm Password</span>
+                        </div>
                     </div>
-                    <div class="mb-6">
-                        <label class="form-label">Confirm Password</label>
-                        <input type="text" ngModel name="confirmpass" class="form-control">
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between mb-6" style="margin-top: 10px;">
+                    <div class="d-flex align-items-center justify-content-between mb-6">
                         <button type="submit" class="btn btn-dark">Change Password</button>
                         
                     </div>

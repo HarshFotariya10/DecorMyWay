@@ -12,6 +12,7 @@ export class NavbarComponent {
   showforgotpass=true;
   showloggedin=true;
   showregister=true;
+  showloginpage=true;
   icon=faUser;
   constructor(){}
   signup(data:Object):void{
@@ -25,6 +26,9 @@ export class NavbarComponent {
   }
   signin(){
     this.showregister=false
+  }
+  logpage(){
+    this.showloginpage=false
   }
   
 }
