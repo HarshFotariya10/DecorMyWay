@@ -206,4 +206,14 @@
         width: 100%;
     }
 }
+.username p{
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-size:25px;
+    
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
 
