@@ -8,6 +8,7 @@ import { AboutusComponent } from './Pages/aboutus/aboutus.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { DecoritemsComponent } from './Pages/Product/decoritems/decoritems.component';
 import { CartComponent } from './Pages/cart/cart.component';
+import { AccountComponent } from './Pages/account/account.component';
 
 const routes: Routes = [
   {
@@ -32,7 +33,11 @@ const routes: Routes = [
   },{
     path:'cart',
     component:CartComponent
+  },{
+    path:'profile',
+    component:AccountComponent
   }
+  
 ];
 
 @NgModule({
