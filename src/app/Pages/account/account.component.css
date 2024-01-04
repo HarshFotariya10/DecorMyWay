@@ -42,9 +42,7 @@ body{
 .content{
     background-color: whitesmoke;
 }
-.container{
-    margin-right: 168px;
-}
+
 .car-body{
     margin-top: 30px;
 }
@@ -67,3 +65,10 @@ body{
      text-align: center; 
      margin-bottom: 20px; 
  }
+.hover:hover{
+    border: 1px solid black;
+
+
+
+}
+ 
