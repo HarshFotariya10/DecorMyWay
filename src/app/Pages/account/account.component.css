@@ -48,13 +48,16 @@ body{
 }
 .car-body a{
     text-decoration: none;
+    text-align: center;
+    
     color: black;
 }
 
 .car-body a:hover{
     background-color: black;
     color: white;
-    transition: 0.4s;
+    transition: 0.3s;
+    border-radius: 30px;
 }
 .heading h1{
     /* CSS for h1 heading */
@@ -65,10 +68,10 @@ body{
      text-align: center; 
      margin-bottom: 20px; 
  }
-.hover:hover{
-    border: 1px solid black;
-
-
-
-}
+ .bordereffect{
+    box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+ }
  
+
+
+

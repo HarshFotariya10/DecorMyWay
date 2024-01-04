@@ -263,3 +263,56 @@ input[type=date]:required:invalid::-webkit-datetime-edit {
 input[type=date]:focus::-webkit-datetime-edit {
     color: black !important;
 }
+.effect{
+    
+        position: relative;
+        display: block;
+        
+        margin: 10px 0;
+        padding: 10px 10px;
+        text-decoration: none;
+        color: #262626;
+        font-family: sans-serif;
+        
+        transition: .5s;
+        z-index: 1;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-top: 2px solid #262626;
+          border-bottom: 2px solid #262626;
+          border-radius: 5px;
+          transform: scaleY(2);
+          opacity: 0;
+          transition: .3s;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 2px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(rgb(196,164,132),#ca8f62);
+          border-radius: 5px;
+          transform: scale(0);
+          opacity: 0;
+          transition: .2s;
+          z-index: -1;
+        }
+        &:hover {
+          color: #fff;
+          &:before {
+            transform: scaleY(1);
+            opacity: 1;
+          }
+          &:after {
+            transform: scaleY(1);
+            opacity: 1;
+          }
+        }
+      }

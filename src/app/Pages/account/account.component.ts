@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent {
-
+  showorderpage = true;
+  order()
+  {
+    this.showorderpage = false
+  }
+  profilepage()
+  {
+    this.showorderpage = true
+  }
 }
