@@ -18,10 +18,10 @@ import { AboutusComponent } from './Pages/aboutus/aboutus.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { CartComponent } from './Pages/cart/cart.component';
 import { ShopComponent } from './Pages/Product/shop/shop.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountComponent } from './Pages/account/account.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -45,10 +45,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, 
     FontAwesomeModule,
     FormsModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    
+    
    
   ],
   providers: [],

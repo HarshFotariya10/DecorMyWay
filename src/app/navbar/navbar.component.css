@@ -61,7 +61,7 @@
     border:none;
 }
 .search-icon{
-    width: 45px;
+    width: 45px;    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@
     color: white;
     text-decoration: none;
     margin-top: 10px;
-}
+}   
 
 .cartvalue{
     color: black;
@@ -288,7 +288,7 @@ input[type=date]:focus::-webkit-datetime-edit {
           border-radius: 5px;
           transform: scaleY(2);
           opacity: 0;
-          transition: .3s;
+          transition: .3s ease-in-out;
         }
         &:after {
           content: '';
@@ -301,7 +301,7 @@ input[type=date]:focus::-webkit-datetime-edit {
           border-radius: 5px;
           transform: scale(0);
           opacity: 0;
-          transition: .2s;
+          transition: .2s ease-in-out;
           z-index: -1;
         }
         &:hover {

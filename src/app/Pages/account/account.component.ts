@@ -14,5 +14,6 @@ export class AccountComponent {
   profilepage()
   {
     this.showorderpage = true
+    
   }
 }
