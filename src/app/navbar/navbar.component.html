@@ -59,7 +59,7 @@
             </li>
             -->
             <li class="nav-item">
-            <a class="nav-link me-2 effect" href="" style="font-size: 25px;" routerLink="/decoritems">Decor items</a>
+            <a class="nav-link me-2 effect" href="" style="font-size: 25px;"  routerLink="/decoritems">Decor items</a>
             
             <!--
             <ul class="sub-menu">
@@ -101,7 +101,7 @@
     <div *ngIf="showloginpage"  class="modal fade" id="loginModal"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form #loginuser="ngForm" (ngSubmit)="signup(loginuser.value)" >
+                <form [formGroup]="loginvalid" (submit)="loggedin()">
                     <div class="modal-header">
                         <h4 class="modal-title d-flex align-items-center" style="margin-left: 180px;">
                             <i class="bi bi-person-circle fs-3 me-2"></i>
@@ -111,29 +111,29 @@
                     </div>
                     <div class="modal-body">
                         <div class="inputgroup mb-3">
-                            <input required="required" type="text email" class="input">
+                            <input formControlName="email" [ngClass]="{'is-invalid':loginvalid.controls.email.invalid && loginvalid.controls.email.touched}" type="text" class="input form-control">
                             <span> Email Address </span>
                           </div>
                           <div class="inputgroup mb-4" style="margin-top: 30px;margin-bottom: 30px;">
-                            <input required="required" type="password" class="input">
+                            <input formControlName="password" [ngClass]="{'is-invalid':loginvalid.controls.password.invalid && loginvalid.controls.password.touched}" type="password" class="input form-control">
                             <span> Password </span>
                           </div>
                         <div class="d-flex align-items-center justify-content-between mb-2">
-                            <button type="submit" class="btn btn-dark"(click)="loggedin()" data-bs-dismiss="modal">LOGIN</button>
+                            <button type="submit" class="btn btn-dark"  data-bs-dismiss="modal">LOGIN</button>
                             <a href="" style="color: black;" (click)="signin()" data-bs-toggle="modal" data-bs-target="#registerModal">Sign in</a>
                             <a href="" style="color: black;" (click)="forgot()" data-bs-toggle="modal" data-bs-target="#forgot1">Forgot Password</a>
                         </div>
                         
-                    </div>
+                    </div>  
                 </form>
             </div>
         </div>
     </div>
 <!--Registration-->
-    <div *ngIf="showregister" class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div *ngIf="showregister"  class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <form>
+                <form [formGroup]="registergrp" (submit)="onregistersubmit()">
                     <div class="modal-header center" >
                         
                         <h5 class="modal-title d-flex" style="margin-left:280px;">
@@ -150,50 +150,53 @@
                             <div class="row">
                                 <div class="col-md-6 ps-0 mb-3">
                                     <div class="inputgroup" style="margin-top: 30px;">
-                                        <input required="required" type="text" class="input">
+                                        <input  formControlName="name"
+                                        [ngClass]="{'is-invalid':registergrp.controls.name.invalid && registergrp.controls.name.touched}" type="text" class="input form-control">
                                         <span> Full Name </span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
                                     <div class="inputgroup" style="margin-top: 30px;">
-                                        <input required="required" type="number" class="input">
+                                        <input formControlName="moblieno" [ngClass]="{'is-invalid':registergrp.controls.moblieno.invalid && registergrp.controls.moblieno.touched}" type="number" class="input form-control">
                                         <span> Moblie No </span>
                                     </div>
                                 </div>
                                 <div class="center">
                                     <div class="inputgroup" style="margin-top: 30px;">
-                                        <input required="required" type="text email" class="input">
+                                        <input formControlName="email" [ngClass]="{'is-invalid':registergrp.controls.email.invalid && registergrp.controls.email.touched}" type="text email" class="input form-control">
                                         <span> Email Address</span>
                                     </div>
                                 </div>
 
                                 <div class="col-md-12 p-0 mb-3">
                                     <div class="inputgroup" style="margin-top: 30px;">
-                                        <textarea required="required" rows="1" type="text" class="input" style="border: 2px solid black;"></textarea>
+                                        <textarea formControlName="address"[ngClass]="{'is-invalid':registergrp.controls.address.invalid && registergrp.controls.address.touched}" rows="1"
+                                         type="text" class="input form-control"
+                                          style="border: 2px solid black;"></textarea>
                                         <span>Address</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 ps-0 mb-3">
                                     <div class="inputgroup" style="margin-top: 30px;">
-                                        <input required="required" type="number" class="input">
+                                        <input formControlName="pincode" [ngClass]="{'is-invalid':registergrp.controls.pincode.invalid && registergrp.controls.pincode.touched}" type="number" class="input form-control">
                                         <span>Pincode</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
                                     <div class="inputgroup" style="margin-top: 30px;">
-                                        <input required="required" type="date" class="input date">
+                                        <input formControlName="date" [ngClass]="{'is-invalid':registergrp.controls.date.invalid && registergrp.controls.date.touched}" type="date" class="input date form-control">
                                         <span>Date of Birth</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 ps-0 mb-3">
                                     <div class="inputgroup" style="margin-top: 30px;">
-                                        <input required="required" type="password" class="input">
+                                        <input formControlName="password" [ngClass]="{'is-invalid':registergrp.controls.password.invalid && registergrp.controls.password.touched}" type="password" class="input form-control">
                                         <span>Password</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
                                     <div class="inputgroup" style="margin-top: 30px;">
-                                        <input required="required" type="password" class="input">
+                                        <input required="required" type="password" class="input form-control">
                                         <span>Confirm Password</span>
                                     </div>
                                 </div>
